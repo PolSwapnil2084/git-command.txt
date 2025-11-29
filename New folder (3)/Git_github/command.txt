@@ -46,3 +46,76 @@ git log --oneline
 
 12. Change Remote URL
 git remote set-url origin <new-url>
+More Git & GitHub Commands (Starting from 13)
+
+13. Stash Commands  
+git stash  
+git stash save "message"  
+git stash list  
+git stash apply  
+git stash pop  
+git stash drop  
+
+14. Undo / Reset / Revert  
+git restore <file>  
+git restore --staged <file>  
+git reset HEAD~1  
+git reset --soft HEAD~1  
+git reset --hard  
+git revert <commit-id>  
+
+15. Fetch & Sync  
+git fetch  
+git fetch --all  
+git pull --rebase  
+git fetch origin main  
+
+16. Tags  
+git tag  
+git tag <tagname>  
+git tag -a v1.0 -m "version 1"  
+git push origin --tags  
+git push origin :refs/tags/<tagname>  
+
+17. Delete Commands  
+git rm <file>  
+git rm -r <folder>  
+git branch -d <branch>  
+git branch -D <branch>  
+git push origin --delete <branch>  
+
+18. Git Ignore  
+Create/edit `.gitignore`  
+Examples:  
+node_modules/  
+.env  
+*.log  
+__pycache__/  
+
+19. Check History & Graph  
+git log  
+git log --oneline  
+git log --graph --oneline --all  
+git show <commit-id>  
+
+20. SSH & Authentication  
+ssh-keygen -t ed25519 -C "email"  
+cat ~/.ssh/id_ed25519.pub  
+# Add key to GitHub Settings → SSH  
+
+21. Clean Workspace  
+git clean -n      # preview  
+git clean -f      # delete untracked files  
+git clean -fd     # delete folders too  
+
+22. Rebase Commands  
+git rebase main  
+git rebase -i HEAD~5  
+git rebase --continue  
+git rebase --abort  
+
+23. Troubleshooting  
+git pull origin main --allow-unrelated-histories  
+git push --force  
+git reset --hard origin/main  
+git merge --abort  
